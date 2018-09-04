@@ -2,15 +2,18 @@
   border: 10px solid yellow;
   height: 100vh;
   width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .container {
+  border: 3px dotted #7CFC00;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   padding: 10px;
   background: white;
-  overflow: scroll;
+  min-height: calc(100vh - 20px);
   position: relative;
 
   h2 {
@@ -22,13 +25,13 @@
   }
 
   img {
-    height: 50%;
+    height: 40%;
     margin: 0 0 50px 0;
     display: block;
     position: absolute;
     transform: rotate(45deg);
-    right: -32px;
-    top: -32px;
+    right: -42px;
+    top: -42px;
     z-index: 2;
   }
 
@@ -43,7 +46,7 @@
 
   span.date {
     display: block;
-    color: hotpink;
+    color: #7B68EE;
     font-family: 'steps-monoregular';
     margin-bottom: 10px;
   }
@@ -56,6 +59,13 @@
     font-size: 1.2rem;
     font-family: 'youngserifregular';
     line-height: 1.5em;
+    position: relative;
+    z-index: 10;
+
+  }
+  .body-text {
+    padding-left: 30px;
+    max-width: 70%;
   }
   ul {
     list-style: circle;

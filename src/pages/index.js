@@ -10,7 +10,7 @@ const IndexPage = ({data}) => (
           <span className="date">{post.node.date}</span>
           <h2>{post.node.title}</h2>
           <img src={post.node.image.file.url} />
-          <div dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
+          <div className='body-text' dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
         </div>
       )
     })}
