@@ -1,15 +1,27 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import '../assets/stylesheets/base.scss'
+
 
 const IndexPage = ({data}) => (
   <div className="main-wrapper">
+    <div className="all-categories">
+      {data.allContentfulCategory.edges.map((cat, i) => {
+        return (
+          <div key={i} className="category-link">
+            <a href={`/${cat.node.slug}`}>{cat.node.name}</a>
+          </div>
+        )
+      })}
+    </div>
     {data.allContentfulPost.edges.map((post, i) => {
       return (
         <div key={i}className="container">
           <span className="date">{post.node.date}</span>
           <h2>{post.node.title}</h2>
-          <img src={post.node.image.file.url} />
+          {post.node.image &&
+            <img src={post.node.image.file.url} />
+          }
+
           <div className='body-text' dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
         </div>
       )
@@ -18,7 +30,7 @@ const IndexPage = ({data}) => (
 )
 
 export const query = graphql`
-  query PostQuery {
+  query IndexQuery {
     allContentfulPost {
       edges {
         node {
@@ -34,6 +46,14 @@ export const query = graphql`
               html
             }
           }
+        }
+      }
+    }
+    allContentfulCategory {
+      edges {
+        node {
+          slug
+          name
         }
       }
     }
