@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
           <span className="date">{post.node.date}</span>
           <h2>{post.node.title}</h2>
           {post.node.image &&
-            <img src={post.node.image.file.url} />
+            <img alt={post.node.image.title} src={post.node.image.file.url} />
           }
 
           <div className='body-text' dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
@@ -37,6 +37,7 @@ export const query = graphql`
           date
           title
           image {
+            title
             file {
               url
             }

@@ -9,7 +9,7 @@ class PostTemplate extends Component {
           <span className="date">{post.date}</span>
           <h2>{post.title}</h2>
           {post.image &&
-            <img src={post.image.file.url} />
+            <img alt={post.image.title} src={post.image.file.url} />
           }
           <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
         </div>
@@ -26,6 +26,7 @@ export const pageQuery = graphql`
       date
       title
       image {
+        title
         file {
           url
         }
