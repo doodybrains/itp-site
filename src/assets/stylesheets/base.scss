@@ -1,3 +1,26 @@
+@mixin position($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@font-face {
+  font-family: 'steps-monoregular';
+  src: url('../fonts/steps-mono-webfont.woff2') format('woff2'),
+       url('../fonts/steps-mono-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'youngserifregular';
+    src: url('../fonts/youngserif-regular-webfont.woff2') format('woff2'),
+         url('../fonts/youngserif-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .main-wrapper {
   border: 10px solid black;
   height: 100vh;
@@ -7,10 +30,12 @@
 }
 a {
   color: black;
+
   &:hover {
     color: #7CFC00;
   }
 }
+
 .all-categories {
   border: 3px dotted #7CFC00;
   display: flex;
@@ -25,17 +50,24 @@ a {
 
   a {
     color: white;
-    font-size: 1.5rem;
-    font-family: 'steps-monoregular';
+    font-size: .9675rem;
+    font-family: 'Overpass Mono', monospace;
     position: relative;
     z-index: 10;
-    width: 33.33%;
+    width: 100%;
     padding: 20px;
     &:hover {
       color: yellow;
     }
   }
+
+  .category-link {
+    // &:first-child{ @include position(10%, 50%)}
+    // &:nth-child(2){ @include position(30%, 80%)}
+    // &:nth-child(3){ @include position(80%, 3%)}
+  }
 }
+
 .container {
   border: 3px dotted #7CFC00;
   display: flex;
@@ -49,7 +81,7 @@ a {
   h2 {
     font-size: 2.25rem;
     margin-bottom: 40px;
-    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
     position: relative;
     z-index: 10;
   }
@@ -67,19 +99,24 @@ a {
 
   h3 {
     font-size: 2rem;
+    // font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
   }
 
   h4 {
     font-size: 1.125em;
     padding: 5px;
     margin-bottom: 10px;
-    font-family: 'youngserifregular';
+    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
+    // font-family: 'youngserifregular';
   }
 
   span.date {
     display: block;
     color: #7B68EE;
-    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
+    // font-family: 'steps-monoregular';
     margin-bottom: 10px;
   }
   ul {
@@ -89,9 +126,7 @@ a {
   p,
   ul li {
     font-size: 1.125rem;
-    font-family: 'IBM Plex Sans', sans-serif;
-
-
+    font-family: 'Overpass', sans-serif;
     line-height: 1.5em;
     position: relative;
     z-index: 10;
@@ -116,39 +151,60 @@ a {
   h2 {
     font-size: 2.25rem;
     margin-bottom: 40px;
-    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
     position: relative;
     z-index: 10;
   }
   h3 {
     font-size: 1.25rem;
     margin-bottom: 40px;
-    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
     position: relative;
     z-index: 10;
   }
   span.date {
     display: block;
     color: #7B68EE;
-    font-family: 'steps-monoregular';
+    font-family: 'Overpass Mono', monospace;
     margin-bottom: 10px;
   }
 }
 
-@font-face {
-  font-family: 'steps-monoregular';
-  src: url('../fonts/steps-mono-webfont.woff2') format('woff2'),
-       url('../fonts/steps-mono-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+.post-wrapper {
+  padding: 20px;
+  img {
+    width: 40%;
+    margin: 0 auto 30px auto;
+    display: block;
+  }
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 40px;
+    font-family: 'Overpass Mono', monospace;
+    position: relative;
+    z-index: 10;
+    padding-left: 20px;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    font-family: 'Overpass Mono', monospace;
+    position: relative;
+    z-index: 10;
+  }
+  span.date {
+    display: block;
+    color: #7B68EE;
+    font-family: 'Overpass Mono', monospace;
+    margin-bottom: 10px;
+  }
+  p,
+  ul li {
+    font-size: 1.125rem;
+    font-family: 'Overpass', sans-serif;
+    line-height: 1.5em;
+    position: relative;
+    z-index: 10;
 
-
-@font-face {
-    font-family: 'youngserifregular';
-    src: url('../fonts/youngserif-regular-webfont.woff2') format('woff2'),
-         url('../fonts/youngserif-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  }
 }
