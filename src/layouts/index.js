@@ -7,8 +7,9 @@ import '../assets/stylesheets/base.scss'
 const Layout = ({ children, data }) => (
   <div>
     <Helmet>
-    <title>{data.site.siteMetadata.title}</title>
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,400,400i,700,700i" rel="stylesheet" />
+      <html lang="en" />
+      <title>{data.site.siteMetadata.title}</title>
+      <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,400,400i,700,700i" rel="stylesheet" />
     </Helmet>
 
     <div>
