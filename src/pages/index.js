@@ -19,7 +19,7 @@ const IndexPage = ({data}) => (
           <span className="date">{post.node.date}</span>
           <h2>{post.node.title}</h2>
           {post.node.image &&
-            <img alt={post.node.image.title} src={post.node.image.file.url} />
+            <img className="some-image" alt={post.node.image.title} src={post.node.image.file.url} />
           }
 
           <div className='body-text' dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
