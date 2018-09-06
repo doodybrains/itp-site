@@ -144,6 +144,9 @@ p img {
   display: block;
   width: 100%;
 }
+p a {
+  text-decoration: underline;
+}
 .container {
   border: 3px dotted #7CFC00;
   display: flex;
