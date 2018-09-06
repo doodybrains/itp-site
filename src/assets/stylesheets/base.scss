@@ -28,11 +28,18 @@
   overflow: scroll;
   overflow-x: hidden;
 }
+
 a {
   color: black;
+  line-height: 1.4em;
+  text-decoration: none;
 
   &:hover {
     color: #7CFC00;
+  }
+
+  h3 {
+    text-decoration: underline;
   }
 }
 
@@ -68,6 +75,70 @@ a {
   }
 }
 
+h2 {
+  font-size: 2.25rem;
+  margin-bottom: 40px;
+  font-family: 'Overpass Mono', monospace;
+  position: relative;
+  z-index: 10;
+}
+
+
+h3 {
+  font-size: 2rem;
+  // font-family: 'steps-monoregular';
+  font-family: 'Overpass Mono', monospace;
+}
+
+h4 {
+  font-size: 1.125em;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: 'steps-monoregular';
+  font-family: 'Overpass Mono', monospace;
+  // font-family: 'youngserifregular';
+}
+
+span.date {
+  display: block;
+  color: #7B68EE;
+  font-family: 'Overpass Mono', monospace;
+  // font-family: 'steps-monoregular';
+  margin-bottom: 10px;
+  text-decoration: none !important;
+}
+ul {
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+p,
+ul li {
+  font-size: 1.125rem;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.5em;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 10px;
+}
+.body-text {
+  padding-left: 30px;
+  max-width: 70%;
+}
+ul {
+  list-style: circle;
+}
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+blockquote {
+  padding-left: 20px;
+  font-style: italic;
+  color: #565656;
+  margin-bottom: 10px;
+}
 .container {
   border: 3px dotted #7CFC00;
   display: flex;
@@ -78,66 +149,15 @@ a {
   min-height: calc(100vh - 20px);
   position: relative;
 
-  h2 {
-    font-size: 2.25rem;
-    margin-bottom: 40px;
-    font-family: 'Overpass Mono', monospace;
-    position: relative;
-    z-index: 10;
-  }
-
   img {
-    height: 40%;
+    width: 10%;
     margin: 0 0 50px 0;
     display: block;
     position: absolute;
-    transform: rotate(45deg);
-    right: -42px;
-    top: -42px;
+    // transform: rotate(45deg);
+    right: 42px;
+    top: 42px;
     z-index: 2;
-  }
-
-  h3 {
-    font-size: 2rem;
-    // font-family: 'steps-monoregular';
-    font-family: 'Overpass Mono', monospace;
-  }
-
-  h4 {
-    font-size: 1.125em;
-    padding: 5px;
-    margin-bottom: 10px;
-    font-family: 'steps-monoregular';
-    font-family: 'Overpass Mono', monospace;
-    // font-family: 'youngserifregular';
-  }
-
-  span.date {
-    display: block;
-    color: #7B68EE;
-    font-family: 'Overpass Mono', monospace;
-    // font-family: 'steps-monoregular';
-    margin-bottom: 10px;
-  }
-  ul {
-    padding-left: 30px;
-    margin-bottom: 10px;
-  }
-  p,
-  ul li {
-    font-size: 1.125rem;
-    font-family: 'Overpass', sans-serif;
-    line-height: 1.5em;
-    position: relative;
-    z-index: 10;
-
-  }
-  .body-text {
-    padding-left: 30px;
-    max-width: 70%;
-  }
-  ul {
-    list-style: circle;
   }
 }
 
@@ -146,27 +166,10 @@ a {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
 
-  h2 {
-    font-size: 2.25rem;
-    margin-bottom: 40px;
-    font-family: 'Overpass Mono', monospace;
-    position: relative;
-    z-index: 10;
-  }
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    font-family: 'Overpass Mono', monospace;
-    position: relative;
-    z-index: 10;
-  }
-  span.date {
-    display: block;
-    color: #7B68EE;
-    font-family: 'Overpass Mono', monospace;
-    margin-bottom: 10px;
+  .post-item {
+    padding-left: 20px;
   }
 }
 
@@ -176,35 +179,5 @@ a {
     width: 40%;
     margin: 0 auto 30px auto;
     display: block;
-  }
-  h2 {
-    font-size: 2.25rem;
-    margin-bottom: 40px;
-    font-family: 'Overpass Mono', monospace;
-    position: relative;
-    z-index: 10;
-    padding-left: 20px;
-  }
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 40px;
-    font-family: 'Overpass Mono', monospace;
-    position: relative;
-    z-index: 10;
-  }
-  span.date {
-    display: block;
-    color: #7B68EE;
-    font-family: 'Overpass Mono', monospace;
-    margin-bottom: 10px;
-  }
-  p,
-  ul li {
-    font-size: 1.125rem;
-    font-family: 'Overpass', sans-serif;
-    line-height: 1.5em;
-    position: relative;
-    z-index: 10;
-
   }
 }

@@ -9,7 +9,7 @@ class CategoryTemplate extends Component {
         <h2>{category.name}</h2>
         {category.posts.map((post, i) => {
           return (
-            <a href={`/${category.slug}/${post.slug}`}key={i}>
+            <a className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
               <span className="date">{post.date}</span>
               <h3>{post.title}</h3>
             </a>
