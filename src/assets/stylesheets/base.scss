@@ -47,14 +47,17 @@ a {
   border: 3px dotted #7CFC00;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
   justify-content: center;
-  flex-direction: row;
   padding: 10px;
   background: white;
   min-height: calc(100vh - 20px);
   position: relative;
   background: black;
-
+  h3 {
+    color: white;
+  }
   a {
     color: white;
     font-size: .9675rem;
@@ -62,7 +65,10 @@ a {
     position: relative;
     z-index: 10;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+    display: block;
     text-decoration: underline;
     &:hover {
       color: yellow;

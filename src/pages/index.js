@@ -12,6 +12,11 @@ const IndexPage = ({data}) => (
           </div>
         )
       })}
+
+      <h3>~</h3>
+      <div className="category-link"><a target="_blank" href="http://marceldochamp.net">personal site</a></div>
+      <div className="category-link"><a target="_blank" href="https://github.com/doodybrains">github</a></div>
+      <div className="category-link"><a target="_blank" href="https://are.na/emma-rae-norton">are.na</a></div>
     </div>
     <div className="misc-posts">
       {data.allContentfulCategory.edges.map((cat, i) => {
