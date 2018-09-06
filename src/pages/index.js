@@ -13,48 +13,56 @@ const IndexPage = ({data}) => (
         )
       })}
     </div>
-    {data.allContentfulPost.edges.map((post, i) => {
-      return (
-        <div key={i}className="container">
-          <span className="date">{post.node.date}</span>
-          <h2>{post.node.title}</h2>
-          {post.node.image &&
-            <img className="some-image" alt={post.node.image.title} src={post.node.image.file.url} />
-          }
-
-          <div className='body-text' dangerouslySetInnerHTML={{__html: post.node.body.childMarkdownRemark.html}} />
-        </div>
-      )
-    })}
+    <div className="misc-posts">
+      {data.allContentfulCategory.edges.map((cat, i) => {
+        return (
+          cat.node.posts.map((post, i)=> {
+            if (cat.node.slug === 'thoughtz') {
+              return (
+                <div key={i} className="container">
+                  <a href={`/${cat.node.slug}/${post.slug}`}className="read-more">read more</a>
+                  <span className="date">{post.date}</span>
+                  <span className="tag">{cat.node.name}</span>
+                  <h2>{post.title}</h2>
+                  {post.image &&
+                    <img className="some-image" alt={post.image.title} src={post.image.file.url} />
+                  }
+                  <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
+                </div>
+              )
+            }
+          })
+        )
+      })}
+    </div>
   </div>
 )
 
 export const query = graphql`
   query IndexQuery {
-    allContentfulPost {
-      edges {
-        node {
-          date
-          title
-          image {
-            title
-            file {
-              url
-            }
-          }
-          body {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
-      }
-    }
     allContentfulCategory {
       edges {
         node {
           slug
           name
+          posts {
+            ... on ContentfulPost {
+              slug
+              date
+              title
+              image {
+                title
+                file {
+                  url
+                }
+              }
+              body {
+                childMarkdownRemark {
+                  html
+                }
+              }
+            }
+          }
         }
       }
     }

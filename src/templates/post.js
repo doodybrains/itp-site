@@ -4,15 +4,13 @@ class PostTemplate extends Component {
   render() {
     const post = this.props.data.contentfulPost;
     return (
-      <div>
-        <div className="post-wrapper">
-          <span className="date">{post.date}</span>
-          <h2>{post.title}</h2>
-          {post.image &&
-            <img alt={post.image.title} src={post.image.file.url} />
-          }
-          <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
-        </div>
+      <div className="post-wrapper">
+        <span className="date">{post.date}</span>
+        <h2>{post.title}</h2>
+        {post.image &&
+          <img alt={post.image.title} src={post.image.file.url} />
+        }
+        <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
       </div>
     );
   }
