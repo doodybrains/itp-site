@@ -6,6 +6,7 @@ class CategoryTemplate extends Component {
 
     return (
       <div className="category">
+        <p><a className="home" href="/">index</a></p>
         <h2>{category.name}</h2>
         {category.posts.map((post, i) => {
           return (

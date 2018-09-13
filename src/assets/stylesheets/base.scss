@@ -20,7 +20,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+.home {
+  position: fixed;
+  transform: rotate(-45deg);
+  right: 15px;
+  top: 15px;
+}
 .main-wrapper {
   border: 10px solid black;
   height: 100vh;
@@ -85,6 +90,7 @@ h2 {
   font-family: 'Overpass Mono', monospace;
   position: relative;
   z-index: 10;
+  max-width: 85%;
 }
 
 
