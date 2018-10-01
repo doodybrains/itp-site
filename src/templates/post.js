@@ -5,7 +5,7 @@ class PostTemplate extends Component {
     const post = this.props.data.contentfulPost;
     return (
       <div className="post-wrapper">
-        <p><a className="home" href="/">index</a></p>
+        <a className="home" href="/">index</a>
         <span className="date">{post.date}</span>
         <h2>{post.title}</h2>
         {post.image &&

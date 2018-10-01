@@ -11,7 +11,7 @@ const Layout = ({ children, data }) => (
       <html lang="en" />
       <title>{data.site.siteMetadata.title}</title>
       <link rel="icon" href={favicon} />
-      <link href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Overpass|Overpass+Mono|IBM+Plex+Mono:400,400i" rel="stylesheet"/>
     </Helmet>
 
     <div>

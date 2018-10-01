@@ -20,43 +20,45 @@
     font-weight: normal;
     font-style: normal;
 }
-/**
- * Add back the container background-color, border-radius, padding, margin
- * and overflow that we removed from <pre>.
- */
+
 .gatsby-highlight {
-  background-color: #fdf6e3;
+  color: white;
+  background-color: royalblue;
   border-radius: 0.3em;
   margin: 0.5em 0;
-  padding: 1em;
+  padding: 1rem;
+  line-height: 1.5rem;
+  font-size: .75rem;
   overflow: auto;
-  font-family: 'Overpass Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
+
+  code {
+    max-width: 80%;
+  }
 }
 
-/**
- * Remove the default PrismJS theme background-color, border-radius, margin,
- * padding and overflow.
- * 1. Make the element just wide enough to fit its content.
- * 2. Always fill the visible space in .gatsby-highlight.
- * 3. Adjust the position of the line numbers
- */
 .gatsby-highlight pre[class*="language-"] {
   background-color: transparent;
   margin: 0;
   padding: 0;
   overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+  float: left;
+  min-width: 100%;
 }
 .gatsby-highlight pre[class*="language-"].line-numbers {
-  padding-left: 2.8em; /* 3 */
+  padding-left: 2.8em;
 }
+
 .home {
   position: fixed;
   transform: rotate(-45deg);
   right: 15px;
   top: 15px;
+  font-size: 1.125rem;
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.5em;
 }
+
 .main-wrapper {
   border: 10px solid black;
   height: 100vh;
@@ -102,23 +104,19 @@ a {
     margin: 0;
     text-align: center;
     display: block;
-    // text-decoration: underline;
     &:hover {
       color: yellow;
     }
   }
-
-  .category-link {
-    // &:first-child{ @include position(10%, 50%)}
-    // &:nth-child(2){ @include position(30%, 80%)}
-    // &:nth-child(3){ @include position(80%, 3%)}
-  }
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
+  line-height: 1.3em;
   margin-bottom: 40px;
-  font-family: 'Overpass Mono', monospace;
+  // font-family: 'Overpass Mono', monospace;
+  font-family: 'youngserifregular';
+  text-transform: uppercase;
   position: relative;
   z-index: 10;
   max-width: 85%;
@@ -127,7 +125,6 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  // font-family: 'steps-monoregular';
   font-family: 'Overpass Mono', monospace;
   padding: 10px 0 20px 0;
 }
@@ -136,17 +133,15 @@ h4 {
   font-size: 1.125em;
   padding: 5px;
   margin-bottom: 10px;
-  font-family: 'steps-monoregular';
   font-family: 'Overpass Mono', monospace;
-  // font-family: 'youngserifregular';
 }
 
 span.date {
   display: block;
   color: #7B68EE;
   font-family: 'Overpass Mono', monospace;
-  // font-family: 'steps-monoregular';
   margin-bottom: 18px;
+  margin-top: 10px;
   line-height: 0;
   text-decoration: none !important;
 }
@@ -154,7 +149,6 @@ span.tag {
   display: block;
   color: hotpink;
   font-family: 'Overpass Mono', monospace;
-  // font-family: 'steps-monoregular';
   margin-bottom: 10px;
   line-height: 0;
   margin-top: 10px;
@@ -167,19 +161,36 @@ ul {
 p,
 ul li,
 ol li {
-  font-size: 1.125rem;
-  font-family: 'Overpass', sans-serif;
+  font-size: 1.25rem;
+  font-family: 'Overpass Mono', sans-serif;
+
   line-height: 1.5em;
   position: relative;
   z-index: 10;
+  margin-bottom: 30px;
+  color: #3a3a3a;
+  em strong {
+    background: yellow;
+    font-style: normal;
+    font-weight: normal;
+  }
+  code {
+    color: red;
+    background: #f2f2f2;
+  }
+}
+ul li,
+ol li {
   margin-bottom: 10px;
+  font-size: .8675rem;
 }
 .body-text {
-  padding-left: 40px;
-  width: 80%;
+  max-width: 890px;
+  width: 100%;
 }
 ul {
   list-style: circle;
+  margin-bottom: 40px;
 }
 strong {
   font-weight: bold;
@@ -197,7 +208,10 @@ p img {
   display: block;
   width: 100%;
 }
-
+iframe {
+  max-width: 100%;
+  margin-bottom: 80px;
+}
 .container {
   border: 3px dotted #7CFC00;
   display: flex;
@@ -267,7 +281,7 @@ p img {
 }
 
 .post-wrapper {
-  padding: 40px;
+  padding: 20px;
   img {
     width: 30%;
     margin: 0 0 30px 0;
