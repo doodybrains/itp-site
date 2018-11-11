@@ -44,7 +44,13 @@
   overflow: initial;
   float: left;
   min-width: 100%;
+  white-space: pre-wrap;
+
+  code {
+    word-break: break-all;
+  }
 }
+
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding-left: 2.8em;
 }
