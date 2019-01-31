@@ -1,16 +1,34 @@
 import React from 'react'
-import Link from 'gatsby-link'
-
 
 const IndexPage = ({data}) => (
   <div className="main-wrapper">
     <div className="all-categories">
       {data.allContentfulCategory.edges.map((cat, i) => {
-        return (
-          <div key={i} className="category-link">
-            <a href={`/${cat.node.slug}`}>{cat.node.name}</a>
-          </div>
-        )
+        if (cat.node.tag === "2019") {
+          return (
+            <div key={i} className="category-link nineteen">
+              <a href={`/${cat.node.slug}`}>{cat.node.name}</a>
+            </div>
+          )
+        }
+
+
+        if (cat.node.tag === "2020") {
+          return (
+            <div key={i} className="category-link twenty">
+              <a href={`/${cat.node.slug}`}>{cat.node.name}</a>
+            </div>
+          )
+        }
+        if (cat.node.tag === "2018") {
+          return (
+            <div key={i} className="category-link eighteen">
+              <a href={`/${cat.node.slug}`}>{cat.node.name}</a>
+            </div>
+          )
+        }
+
+
       })}
 
       <h3>~</h3>
@@ -50,6 +68,7 @@ export const query = graphql`
         node {
           slug
           name
+          tag
           posts {
             ... on ContentfulPost {
               slug

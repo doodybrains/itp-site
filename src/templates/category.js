@@ -3,19 +3,38 @@ import React, { Component } from "react";
 class CategoryTemplate extends Component {
   render() {
     const category = this.props.data.contentfulCategory;
+    const mousePage = category.slug === 'the-computer-mouse';
+    const mouseClass = mousePage ? 'mouse-page' : '';
 
     return (
-      <div className="category">
+      <div className={`category ${mouseClass}`}>
         <a className="home" href="/">index</a>
         <h2>{category.name}</h2>
-        {category.posts.map((post, i) => {
-          return (
-            <a className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
-              <span className="date">{post.date}</span>
-              <h3>{post.title}</h3>
-            </a>
-          );
-        })}
+        {!mousePage && 
+          category.posts.map((post, i) => {
+            return (
+              <a className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
+                <span className="date">{post.date}</span>
+                <h3>{post.title}</h3>
+              </a>
+            );
+          })
+        }
+
+        {mousePage && 
+          category.posts.map((post, i) => {
+            return (
+              <div className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
+                <span className="date">{post.date}</span>
+                <h3>{post.title}</h3>
+                {post.image &&
+                  <img alt={post.image.title} src={post.image.file.url} />
+                }
+                <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
+              </div>
+            );
+          })
+        }
       </div>
     );
   }
@@ -33,6 +52,17 @@ export const pageQuery = graphql`
           date
           slug
           title
+          image {
+            title
+            file {
+              url
+            }
+          }
+          body {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }
