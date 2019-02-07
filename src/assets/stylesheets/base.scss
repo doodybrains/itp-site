@@ -92,7 +92,7 @@ a {
   flex-direction: column;
   flex-wrap: wrap-reverse;
   justify-content: center;
-  padding: 10px;
+  padding: 120px 10px;
   background: white;
   min-height: calc(100vh - 20px);
   position: relative;
@@ -119,11 +119,15 @@ a {
     margin-bottom: 10px;
 
     &.eighteen {
-      a {display: block; font-size: .8675rem; }
+      text-transform: lowercase !important;
+      margin-bottom: 32px;
+      a {border-color: deeppink;}
       a::before { content: '2018'; display: block; font-size: .675em; }
     }
     &.nineteen {
-      a {display: block; }
+      text-transform: lowercase !important;
+      margin-bottom: 32px;
+      a { border-color: coral; }
       a::before { content: '2019'; display: block; font-size: .675em; }
     }
   }
