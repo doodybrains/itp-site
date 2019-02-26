@@ -319,6 +319,9 @@ iframe {
     background-color: #DCDCDC;
     color: black;
     padding: 5px;
+    @media only screen and (min-width: 786px) {
+      padding: 0;
+    }
 
     .mouse-items {
       display: flex;
@@ -328,6 +331,7 @@ iframe {
       width: 100%;
       @media only screen and (min-width: 786px) {
         display: block;
+        padding: 0 17px;
         column-count: 4;
         width: 100%;
       }
@@ -355,7 +359,7 @@ iframe {
       margin: 60px auto 0 auto;
       width: 100%;
       @media only screen and (min-width: 786px) {
-        padding: 0 10px;
+        padding: 0 5px;
       }
 
       .body-text {
@@ -368,11 +372,15 @@ iframe {
         padding: 0;
         margin-bottom: 30px;
         font-style: italic;
-
+        letter-spacing: .09em;
         @media only screen and (min-width: 786px) {
-          font-size: .8675em;
+          font-size: .675em;
           font-weight: bold;
           line-height: 1.25em;
+          margin-bottom: 10px;
+          background-color: white;
+          text-align: right;
+          padding: 3px;
           color: magenta;
         }
       }
@@ -386,17 +394,27 @@ iframe {
         width: 92%;
         transform: rotate(-3deg);
         font-size: .675em;
+        letter-spacing: normal;
         @media only screen and (min-width: 786px) {
           font-size: .75em;
           line-height: 1.25em;
+
         }
       }
+
       blockquote {
-        margin-bottom: 3px;
+        padding: 10px;
+        margin-bottom: 6px;
+        @media only screen and (min-width: 786px) {
+          padding: 30px 35px;
+          margin-bottom: 12px;
+        }
       }
+
       .body-text h3 a {
         color: white;
       }
+
       .date {
         color: black;
         font-size: .675em;
@@ -417,8 +435,8 @@ iframe {
       color: black;
       font-size: 1em;
       @media only screen and (min-width: 786px) {
-        font-size: .675em;
-        margin: 15px 0 15px 0;
+        font-size: .75em;
+        margin: 0 0 15px 0;
       }
     }
 
