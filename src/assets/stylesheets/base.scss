@@ -228,7 +228,7 @@ em {
   font-style: italic;
 }
 blockquote {
-  background: antiquewhite;
+  background: lemonchiffon;
   padding: 20px;
   margin-bottom: 50px;
 
@@ -318,12 +318,22 @@ iframe {
     background:#DCDCDC;
     color: black;
 
+    .mouse-items {
+      @media only screen and (min-width: 786px) {
+        column-count: 4;
+        width: 100%;
+      }
+    }
+
     h2 {
       position: fixed;
       top: 20px;
       left: 20px;
       font-family: 'Overpass Mono', monospace;
       font-size: .8675em;
+      @media only screen and (min-width: 786px) {
+        font-size: .675em;
+      }
     }
 
     .home {
@@ -337,7 +347,7 @@ iframe {
       margin: 60px auto 0 auto;
       width: 100%;
       @media only screen and (min-width: 786px) {
-        padding: 0 80px;
+        padding: 0 10px;
       }
 
       .body-text {
@@ -350,20 +360,45 @@ iframe {
         margin-bottom: 30px;
         font-style: italic;
         @media only screen and (min-width: 786px) {
-          font-size: 1.75em;
+          font-size: .8675em;
+          font-weight: bold;
+          line-height: 1.25em;
+          color: magenta;
         }
       }
 
+      .body-text h3 {
+        @media only screen and (min-width: 786px) {
+          font-size: .75em;
+          line-height: 1.25em;
+          color: white;
+          background-color: deepskyblue;
+          padding: 6px 3px;
+          line-height: 1.3em;
+          word-wrap: break-word;
+          width: 92%;
+          transform: rotate(-3deg);
+        }
+      }
+      blockquote {
+        margin-bottom: 3px;
+      }
+      .body-text h3 a {
+        color: white;
+      }
       .date {
         color: black;
         font-size: .675em;
         @media only screen and (min-width: 786px) {
-          font-size: .8675em;
+          display: none;
         }
       }
 
       img {
         margin-bottom: 30px;
+        @media only screen and (min-width: 786px) {
+          margin-bottom: 10px;
+        }
       }
     }
 
@@ -371,7 +406,8 @@ iframe {
       color: black;
       font-size: 1em;
       @media only screen and (min-width: 786px) {
-        font-size: 1.625em;
+        font-size: .675em;
+        margin: 15px 0 15px 0;
       }
     }
 
@@ -381,8 +417,8 @@ iframe {
       padding: 0 10px;
     }
 
-    p em strong, ul li em strong, ol li em strong { 
-      color: white; 
+    p em strong, ul li em strong, ol li em strong {
+      color: white;
       background-color: black;
       padding: 0 5px;
     }

@@ -3,7 +3,6 @@ import React, { Component } from "react";
 class PostTemplate extends Component {
   render() {
     const post = this.props.data.contentfulPost;
-    console.log(post);
     
     return (
       <div className="post-wrapper">

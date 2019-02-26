@@ -11,8 +11,6 @@ const IndexPage = ({data}) => (
             </div>
           )
         }
-
-
         if (cat.node.tag === "2020") {
           return (
             <div key={i} className="category-link twenty">
@@ -27,8 +25,6 @@ const IndexPage = ({data}) => (
             </div>
           )
         }
-
-
       })}
 
       <h3>~</h3>

@@ -14,7 +14,8 @@ class CategoryTemplate extends Component {
         {this.props.data.contentfulCategory.name === "veillance" &&
           <img className="cookie" src="http://142.93.196.175/image?source=blog" />
         }
-        {!mousePage && 
+
+        {!mousePage &&
           category.posts.map((post, i) => {
             return (
               <a className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
@@ -25,20 +26,22 @@ class CategoryTemplate extends Component {
           })
         }
 
-        {mousePage && 
-          category.posts.map((post, i) => {
-            return (
-              <div className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
-                <span className="date">{post.date}</span>
-                <h3>{post.title}</h3>
-                {post.image &&
-                  <img alt={post.image.title} src={post.image.file.url} />
-                }
-                <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
-              </div>
-            );
-          })
-        }
+        <div className="mouse-items">
+          {mousePage &&
+            category.posts.map((post, i) => {
+              return (
+                <div className="post-item" href={`/${category.slug}/${post.slug}`} key={i}>
+                  <span className="date">{post.date}</span>
+                  <h3>{post.title}</h3>
+                  {post.image &&
+                    <img alt={post.image.title} src={post.image.file.url} />
+                  }
+                  <div className='body-text' dangerouslySetInnerHTML={{__html: post.body.childMarkdownRemark.html}} />
+                </div>
+              );
+            })
+          }
+        </div>
       </div>
     );
   }
