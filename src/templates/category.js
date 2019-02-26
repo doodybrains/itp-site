@@ -5,7 +5,6 @@ class CategoryTemplate extends Component {
     const category = this.props.data.contentfulCategory;
     const mousePage = category.slug === 'the-computer-mouse';
     const mouseClass = mousePage ? 'mouse-page' : '';
-    console.log(this.props.data.contentfulCategory);
 
     return (
       <div className={`category ${mouseClass}`}>
