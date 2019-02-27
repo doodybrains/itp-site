@@ -456,7 +456,7 @@ iframe {
     p {
       color: black;
       font-size: 1em;
-      display: inline-block;
+      display: contents;
       @media only screen and (min-width: 786px) {
         font-size: .75em;
         margin: 0 0 15px 0;
