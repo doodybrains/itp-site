@@ -394,11 +394,11 @@ iframe {
         letter-spacing: normal;
         background-color: deepskyblue;
         transform: rotate(-3deg);
-        em {
 
+        em {
+          display: block;
           font-size: .675em;
           line-height: 1.3em;
-
           @media only screen and (min-width: 786px) {
             font-size: .75em;
             line-height: 1.25em;
@@ -413,6 +413,7 @@ iframe {
           transform: rotate(12deg);
           padding: 15px;
           text-align: left;
+          text-shadow: 1px 1px 2px black;
           @media only screen and (min-width: 786px) {
             font-size: 2em;
             line-height: 1.25em;
