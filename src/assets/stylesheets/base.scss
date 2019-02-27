@@ -387,20 +387,39 @@ iframe {
 
       .body-text h3 {
         color: white;
-        background-color: deepskyblue;
         padding: 6px 3px;
-        line-height: 1.3em;
         word-wrap: break-word;
         width: 92%;
-        transform: rotate(-3deg);
-        font-size: .675em;
+        background-color: transparent;
         letter-spacing: normal;
-        @media only screen and (min-width: 786px) {
-          font-size: .75em;
-          line-height: 1.25em;
+        background-color: deepskyblue;
+        transform: rotate(-3deg);
+        em {
 
+          font-size: .675em;
+          line-height: 1.3em;
+
+          @media only screen and (min-width: 786px) {
+            font-size: .75em;
+            line-height: 1.25em;
+          }
+        }
+
+        strong {
+          display: block;
+          background-color: springgreen;
+          font-size: 1em;
+          line-height: 1.3em;
+          transform: rotate(12deg);
+          padding: 15px;
+          text-align: left;
+          @media only screen and (min-width: 786px) {
+            font-size: 2em;
+            line-height: 1.25em;
+          }
         }
       }
+
 
       blockquote {
         padding: 10px;
