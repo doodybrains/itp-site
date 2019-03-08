@@ -10,10 +10,6 @@ class CategoryTemplate extends Component {
       <div className={`category ${mouseClass}`}>
         <a className="home" href="/">index</a>
         <h2>{category.name}</h2>
-        {this.props.data.contentfulCategory.name === "veillance" &&
-          <img className="cookie" src="http://142.93.196.175/image?source=blog" />
-        }
-
         {!mousePage &&
           category.posts.map((post, i) => {
             return (

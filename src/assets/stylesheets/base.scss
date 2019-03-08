@@ -139,6 +139,11 @@ a {
   }
 
 }
+h1 {
+  font-family: 'Overpass Mono', monospace;
+  font-size: 1.75em;
+  color: springgreen;
+}
 
 h2 {
   font-size: 1.75rem;
@@ -154,7 +159,7 @@ h2 {
 
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.675rem;
   font-family: 'Overpass Mono', monospace;
   padding: 10px 0 20px 0;
 }
@@ -216,6 +221,11 @@ ol li {
 .body-text {
   max-width: 890px;
   width: 100%;
+
+  h2 {
+    font-size: 1.325em;
+    margin-bottom: 10px;
+  }
 }
 ul {
   list-style: circle;
